@@ -16,7 +16,7 @@ $(call inherit-product, device/sony/common/common.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, hardware/broadcom/wlan/bcmdhd/config/config-bcm.mk)
 
-SOMC_PLATFORM := kitakami
+SOMC_PLATFORM := qcom
 
 SONY_ROOT := device/sony/kitakami/rootdir
 
@@ -56,6 +56,13 @@ PRODUCT_COPY_FILES += \
     $(SONY_ROOT)/system/etc/data/netmgr_config.xml:system/etc/data/netmgr_config.xml \
     $(SONY_ROOT)/system/etc/data/qmi_config.xml:system/etc/data/qmi_config.xml
 
+# Recovery
+PRODUCT_COPY_FILES += \
+    $(SONY_ROOT)/fstab.qcom:root/fstab.qcom \
+    $(SONY_ROOT)/twrp.fstab:root/twrp.fstab \
+    $(SONY_ROOT)/init.rc:root/init.rc \
+    $(SONY_ROOT)/init.recovery.qcom.rc:root/init.recovery.qcom.rc
+
 # Device Specific Hardware
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.opengles.aep.xml:system/etc/permissions/android.hardware.opengles.aep.xml \
@@ -65,7 +72,7 @@ PRODUCT_COPY_FILES += \
 # Platform Init
 PRODUCT_PACKAGES += \
     fstab.kitakami \
-    init.kitakami.pwr
+    init.qcom.pwr
 
 # NFC packages
 PRODUCT_PACKAGES += \
