@@ -9,7 +9,7 @@ on boot
     #insmod /sbin/texfat.ko
     
     write /sys/class/android_usb/android0/idVendor 0FCE
-    write /sys/class/android_usb/android0/idProduct 51D9
+    write /sys/class/android_usb/android0/idProduct 5${ro.usb.pid_suffix}
 
     # Configure governor settings for little cluster
     write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor "interactive"
