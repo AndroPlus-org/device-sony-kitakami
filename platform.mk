@@ -61,7 +61,8 @@ PRODUCT_COPY_FILES += \
     $(SONY_ROOT)/fstab.qcom:root/fstab.qcom \
     $(SONY_ROOT)/twrp.fstab:root/twrp.fstab \
     $(SONY_ROOT)/init.rc:root/init.rc \
-    $(SONY_ROOT)/init.recovery.qcom.rc:root/init.recovery.qcom.rc
+    $(SONY_ROOT)/init.recovery.qcom.rc:root/init.recovery.qcom.rc \
+    $(SONY_ROOT)/DroidSansFallback.ttf:root/twres/fonts/DroidSansFallback.ttf
 
 # Device Specific Hardware
 PRODUCT_COPY_FILES += \
