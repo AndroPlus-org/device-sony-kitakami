@@ -61,14 +61,17 @@ PRODUCT_COPY_FILES += \
     $(SONY_ROOT)/fstab.qcom:root/fstab.qcom \
     $(SONY_ROOT)/twrp.fstab:root/twrp.fstab \
     $(SONY_ROOT)/init.rc:root/init.rc \
-    $(SONY_ROOT)/init.recovery.qcom.rc:root/init.recovery.qcom.rc \
-    $(SONY_ROOT)/DroidSansFallback.ttf:root/twres/fonts/DroidSansFallback.ttf
+    $(SONY_ROOT)/init.recovery.qcom.rc:root/init.recovery.qcom.rc
 
 # Device Specific Hardware
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.opengles.aep.xml:system/etc/permissions/android.hardware.opengles.aep.xml \
     frameworks/native/data/etc/android.hardware.sensor.barometer.xml:system/etc/permissions/android.hardware.sensor.barometer.xml \
     frameworks/native/data/etc/android.hardware.nfc.hce.xml:system/etc/permissions/android.hardware.nfc.hce.xml
+
+# Bootimg tools
+PRODUCT_PACKAGES += \
+    extract_elf_ramdisk
 
 # Platform Init
 PRODUCT_PACKAGES += \
