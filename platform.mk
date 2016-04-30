@@ -61,7 +61,15 @@ PRODUCT_COPY_FILES += \
     $(SONY_ROOT)/fstab.qcom:root/fstab.qcom \
     $(SONY_ROOT)/twrp.fstab:root/twrp.fstab \
     $(SONY_ROOT)/init.rc:root/init.rc \
-    $(SONY_ROOT)/init.recovery.qcom.rc:root/init.recovery.qcom.rc
+    $(SONY_ROOT)/init.recovery.qcom.rc:root/init.recovery.qcom.rc \
+    $(SONY_ROOT)/vendor/lib64/hw/keystore.msm8994.so:root/vendor/lib64/hw/keystore.msm8994.so \
+    $(SONY_ROOT)/vendor/lib64/hw/keystore.msm8994.so:root/sbin/keystore.msm8994.so \
+    $(SONY_ROOT)/sbin/libQSEEComAPI.so:root/sbin/libQSEEComAPI.so \
+    $(SONY_ROOT)/sbin/libdiag.so:root/sbin/libdiag.so \
+    $(SONY_ROOT)/sbin/libdrmfs.so:root/sbin/libdrmfs.so \
+    $(SONY_ROOT)/sbin/librpmb.so:root/sbin/librpmb.so \
+    $(SONY_ROOT)/sbin/libssd.so:root/sbin/libssd.so \
+    $(SONY_ROOT)/sbin/qseecomd:root/sbin/qseecomd
 
 # Device Specific Hardware
 PRODUCT_COPY_FILES += \
