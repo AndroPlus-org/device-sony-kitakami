@@ -67,8 +67,10 @@ PRODUCT_COPY_FILES += \
     $(SONY_ROOT)/sbin/libQSEEComAPI.so:root/sbin/libQSEEComAPI.so \
     $(SONY_ROOT)/sbin/libdiag.so:root/sbin/libdiag.so \
     $(SONY_ROOT)/sbin/libdrmfs.so:root/sbin/libdrmfs.so \
+    $(SONY_ROOT)/sbin/libdrmtime.so:root/sbin/libdrmtime.so \
     $(SONY_ROOT)/sbin/librpmb.so:root/sbin/librpmb.so \
     $(SONY_ROOT)/sbin/libssd.so:root/sbin/libssd.so \
+    $(SONY_ROOT)/sbin/libsecureui.so:root/sbin/libsecureui.so \
     $(SONY_ROOT)/sbin/qseecomd:root/sbin/qseecomd
 
 # Device Specific Hardware
